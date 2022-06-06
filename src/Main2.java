@@ -4,16 +4,29 @@ public class Main2 {
     public static void main(String[] args) {
         System.out.print("Введите значение a = ");
         Scanner sc1 = new Scanner(System.in);
-        int a = sc1.nextInt();
+        double a = sc1.nextDouble();
         System.out.print("Введите значение b = ");
-       // Scanner sc2 = new Scanner(System.in);
-        int b = sc1.nextInt();
+        double b = sc1.nextDouble();
         System.out.print("Введите значение c = ");
-       // Scanner sc3 = new Scanner(System.in);
-        int c = sc1.nextInt();
-        int b1 = 2;
-        double d = (Math.pow (b, b1) - (4 * a * c));
+        double c = sc1.nextDouble();
+        double d = (Math.pow(b,2) - (4 * a * c));
         System.out.println("Значение дискриминанта равно " + d);
+        double x1, x2;
+
+        if (d>0)
+        {
+            x1 = ((-b) + Math.sqrt(d)) / (2 * a);
+            x2 = ((-b) - Math.sqrt(d)) / (2 * a);
+            System.out.println("Корни уравнения: " + x1 + ", " + x2);
+        }
+        else if (d==0)
+        {
+            x1 = (-b) / (2 * a);
+            System.out.println("Корень уравнения = " + x1);
+        }
+        else
+            System.out.println("Нет корней");
+
 
 
     }
